@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/bfontaine/silent.svg)](https://coveralls.io/r/bfontaine/silent)
 [![Dependency Status](https://img.shields.io/gemnasium/bfontaine/silent.svg)](https://gemnasium.com/bfontaine/silent)
 
-**silent** is a Ruby gem to silently execute a piece of code, that is without
+**silent** is a Ruby gem to silently execute a piece of code, that is, without
 any visible output.
 
 ## Install
