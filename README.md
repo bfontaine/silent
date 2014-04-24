@@ -27,6 +27,11 @@ silent(:stderr) do
   # do bad things without apparent warnings
   ARGV = 42
 end
+
+silent(:stdout, :stderr) do
+  puts "Everything is silent here"
+  $stderr.write "is anyone listening to me?"
+end
 ```
 
 ## Tests
