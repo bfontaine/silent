@@ -3,3 +3,5 @@
 .*.swo
 *.gem
 /coverage
+/.yardoc
+/doc
