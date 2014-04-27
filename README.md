@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/bfontaine/silent.svg?branch=master)](https://travis-ci.org/bfontaine/silent)
 [![Gem Version](https://img.shields.io/gem/v/silent.png)](http://badge.fury.io/rb/silent)
 [![Coverage Status](https://img.shields.io/coveralls/bfontaine/silent.svg)](https://coveralls.io/r/bfontaine/silent)
+[![Inline docs](http://inch-pages.github.io/github/bfontaine/silent.svg)](http://inch-pages.github.io/github/bfontaine/silent)
 [![Dependency Status](https://img.shields.io/gemnasium/bfontaine/silent.svg)](https://gemnasium.com/bfontaine/silent)
 
 **silent** is a Ruby gem to silently execute a piece of code, that is, without
