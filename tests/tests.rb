@@ -7,12 +7,12 @@ Coveralls.wear!
 require 'test/unit'
 require 'simplecov'
 
-test_dir = File.expand_path( File.dirname(__FILE__) )
-
 SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start { add_filter '/tests/' }
 
 require 'silent'
+
+class MyException < Exception; end
 
 class SilentTests < Test::Unit::TestCase
   def setup
@@ -77,6 +77,19 @@ class SilentTests < Test::Unit::TestCase
 
     assert_equal(s, $stderr.read)
     assert_equal('', $stdout.read)
+  end
+
+  def test_silent_raise
+    assert_raise(MyException) do
+      silent(:stdout, :stderr) do
+        raise MyException.new
+      end
+    end
+
+    print "foo"
+
+    $stdout.seek(0)
+    assert_equal("foo", $stdout.read)
   end
 end
 
