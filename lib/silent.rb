@@ -8,13 +8,13 @@
 def silent(*what)
   return unless block_given?
 
-  _stdout, $stdout = $stdout, StringIO.new if what.include?(:stdout)
-  _stderr, $stderr = $stderr, StringIO.new if what.include?(:stderr)
+  begin
+    _stdout, $stdout = $stdout, StringIO.new if what.include?(:stdout)
+    _stderr, $stderr = $stderr, StringIO.new if what.include?(:stderr)
 
-  res = yield
-
-  $stdout = _stdout if what.include?(:stdout)
-  $stderr = _stderr if what.include?(:stderr)
-
-  res
+    yield
+  ensure
+    $stdout = _stdout if what.include?(:stdout)
+    $stderr = _stderr if what.include?(:stderr)
+  end
 end
