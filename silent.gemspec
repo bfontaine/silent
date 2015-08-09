@@ -2,7 +2,7 @@ require './lib/silent'
 
 Gem::Specification.new do |s|
     s.name          = 'silent'
-    s.version       = '0.1.0'
+    s.version       = '0.2.0'
     s.date          = Time.now
 
     s.summary       = 'Silently execute a piece of code'
